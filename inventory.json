@@ -1,0 +1,136 @@
+[
+  {
+    "folder": "01-half-rainbow-dqn",
+    "source": "HalfRainbowDQN.ipynb",
+    "source_sha256": "926c3147e336e3dc7d7ef1fd0699b715be760953ece0e1d8aba28c40b151adbd",
+    "code_cells": 22,
+    "nonempty_unexecuted_source_cells": [
+      13
+    ],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "02-natural-policy-gradient",
+    "source": "HW2_NPG.ipynb",
+    "source_sha256": "883a18cf716ab96395cb0160eebd33ae9fe3d41750465ca06c29df2b0d3b7ed5",
+    "code_cells": 14,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "03-reinforce",
+    "source": "HW2_REINFORCE.ipynb",
+    "source_sha256": "8c802af84f0c1c37e7a96e100d1df54a05c0bf129b03b4d2d196c8e73c86b7b1",
+    "code_cells": 25,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "04-dpg-ddpg-td3",
+    "source": "HW3_DPGs_completed.ipynb",
+    "source_sha256": "f0e929bd2d7b8dfeb22d5b7e3a76a6946f5ca52676f05e4536cb0c31f392cbc0",
+    "code_cells": 17,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "05-dyna-q",
+    "source": "HW4_dynaq_completed.ipynb",
+    "source_sha256": "3da0e87f95a34fa7cb1bb02754c060295df3b4f97c41b83ddc19669ca59b47f5",
+    "code_cells": 19,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "06-muzero-style-search",
+    "source": "HW4_MCTS_MuZero_completed.ipynb",
+    "source_sha256": "f7b29ef3b60235f3c539f064dba236a709c05298b9bf1fb5543b85b4e8e82aae",
+    "code_cells": 11,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "07-contextual-bandits",
+    "source": "Ctx_Bandits_completed.ipynb",
+    "source_sha256": "af5e6b830d2b282a7ff9165403900000547267d6abd8d083fc76a5697c55655b",
+    "code_cells": 16,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "08-deepsea-exploration",
+    "source": "exploration_hw_completed.ipynb",
+    "source_sha256": "06dc9c326b24f7cd6281c7b717e6f54140c8a39c2b2d642c46762527f33e1239",
+    "code_cells": 13,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "09-offline-ddpg-bc",
+    "source": "DDPG + Behavior Cloning_comp.ipynb",
+    "source_sha256": "e3530990f4ea39aaecefce7fae93b576a45d21ad4568531dd740d0ae9150bac8",
+    "code_cells": 23,
+    "nonempty_unexecuted_source_cells": [
+      0
+    ],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "10-gail",
+    "source": "GAIL_comp.ipynb",
+    "source_sha256": "cdc83f04f4b23f3a195fc422a81e52e5d56d2f0cca7ed828ce8e3cb54b8d58de",
+    "code_cells": 19,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "11-minigrid-imitation",
+    "source": "Minigrid Imitation Learning-comp.ipynb",
+    "source_sha256": "c2e9706db0c98610c1ac9705362ab86fdf1951e02327b3a3435d55fad36c8fcd",
+    "code_cells": 14,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "12-matrix-games",
+    "source": "Multi_Agent_release_comp.ipynb",
+    "source_sha256": "b289d9ed918d95f8fdd4cdc48a869af687418b9a416a419360e391ee732451ff",
+    "code_cells": 3,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "13-torchrl-marl",
+    "source": "rl_maddpg_mappo_comp.ipynb",
+    "source_sha256": "349f31354edaeab0060fcbff9f2a7a620f24e53bd1d03e616e1bfd485c14007a",
+    "code_cells": 36,
+    "nonempty_unexecuted_source_cells": [
+      2,
+      22,
+      49
+    ],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  },
+  {
+    "folder": "14-meta-rl",
+    "source": "rl2_maml_varibad_comp.ipynb",
+    "source_sha256": "62f3ba565ba3a6488d4f535121e8b8ea4e05f52c0fec5d5ca8aac53c85abdd88",
+    "code_cells": 38,
+    "nonempty_unexecuted_source_cells": [],
+    "saved_errors": [],
+    "mode": "static review; not rerun"
+  }
+]

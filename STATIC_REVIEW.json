@@ -1,0 +1,81 @@
+{
+  "mode": "schema and syntax only; no cells executed",
+  "notebooks_checked": 15,
+  "results": [
+    {
+      "notebook": "01-half-rainbow-dqn/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "01-half-rainbow-dqn/notebook_reviewed_unexecuted.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "02-natural-policy-gradient/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "03-reinforce/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "04-dpg-ddpg-td3/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "05-dyna-q/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "06-muzero-style-search/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "07-contextual-bandits/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "08-deepsea-exploration/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "09-offline-ddpg-bc/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "10-gail/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "11-minigrid-imitation/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "12-matrix-games/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "13-torchrl-marl/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    },
+    {
+      "notebook": "14-meta-rl/notebook.ipynb",
+      "schema": "valid",
+      "syntax_errors": []
+    }
+  ]
+}
