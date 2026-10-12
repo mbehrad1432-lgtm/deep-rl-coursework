@@ -1,0 +1,74 @@
+[
+  {
+    "source_cell": 2,
+    "text": "{'HEIGHT': 10, 'WIDTH': 10, 'MAX_STEPS': 500, 'BATCH_EPISODES': 20, 'N_ITER_PG_RAW': 60, 'N_ITER_NPG_RAW': 60, 'N_ITER_PG_KL': 60, 'N_ITER_NPG_KL': 60, 'ALPHA_PG_RAW': 0.05, 'ALPHA_NPG_RAW': 0.5, 'DAMPING': 0.001, 'TARGET_KL': 0.01, 'PARALLEL_ROLLOUTS': True, 'N_JOBS': -1, 'JOBLIB_AVAILABLE': True}\n"
+  },
+  {
+    "source_cell": 4,
+    "text": "I rotations: 2\nO rotations: 1\nT rotations: 4\nS rotations: 2\nZ rotations: 2\nJ rotations: 4\nL rotations: 4\n"
+  },
+  {
+    "source_cell": 5,
+    "text": "legal T placements on empty board: 34\n"
+  },
+  {
+    "source_cell": 5,
+    "text": "<Figure size 400x600 with 1 Axes>"
+  },
+  {
+    "source_cell": 7,
+    "text": "FEATURE_DIM: 22\nactions: 17 feature shape: (22,)\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "g norm: 0.0\nF shape: (22, 22) F trace: 0.05416719549735447\neta_hat: 0.0 mean length: 16.0 mean lines: 0.0\n"
+  },
+  {
+    "source_cell": 15,
+    "text": " PG iter 000 | eta +0.0034 | len 14.8 | lines 0.05 | steps 295 | alpha 0.05\n PG iter 006 | eta +0.0106 | len 14.1 | lines 0.15 | steps 282 | alpha 0.05\n PG iter 012 | eta +0.0035 | len 14.2 | lines 0.05 | steps 285 | alpha 0.05\n PG iter 018 | eta +0.0072 | len 13.9 | lines 0.10 | steps 278 | alpha 0.05\n PG iter 024 | eta +0.0231 | len 15.2 | lines 0.35 | steps 303 | alpha 0.05\n PG iter 030 | eta +0.0100 | len 15.1 | lines 0.15 | steps 301 | alpha 0.05\n PG iter 036 | eta +0.0036 | len 13.8 | lines 0.05 | steps 277 | alpha 0.05\n PG iter 042 | eta +0.0035 | len 14.2 | lines 0.05 | steps 283 | alpha 0.05\n PG iter 048 | eta +0.0134 | len 14.9 | lines 0.20 | steps 298 | alpha 0.05\n PG iter 054 | eta +0.0068 | len 14.6 | lines 0.10 | steps 292 | alpha 0.05\n PG iter 059 | eta +0.0071 | len 14.2 | lines 0.10 | steps 283 | alpha 0.05\nNPG iter 000 | eta +0.0034 | len 14.8 | lines 0.05 | steps 295 | alpha 0.5\nNPG iter 006 | eta +0.0103 | len 14.6 | lines 0.15 | steps 292 | alpha 0.5\nNPG iter 012 | eta +0.0000 | len 14.0 | lines 0.00 | steps 280 | alpha 0.5\nNPG iter 018 | eta +0.0034 | len 14.9 | lines 0.05 | steps 298 | alpha 0.5\nNPG iter 024 | eta +0.0253 | len 15.8 | lines 0.40 | steps 316 | alpha 0.5\nNPG iter 030 | eta +0.0222 | len 15.8 | lines 0.35 | steps 316 | alpha 0.5\nNPG iter 036 | eta +0.0123 | len 16.2 | lines 0.20 | steps 325 | alpha 0.5\nNPG iter 042 | eta +0.0275 | len 16.4 | lines 0.45 | steps 327 | alpha 0.5\nNPG iter 048 | eta +0.0479 | len 17.8 | lines 0.85 | steps 355 | alpha 0.5\nNPG iter 054 | eta +0.0369 | len 17.6 | lines 0.65 | steps 352 | alpha 0.5\nNPG iter 059 | eta +0.0404 | len 18.6 | lines 0.75 | steps 371 | alpha 0.5\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "<Figure size 2000x400 with 4 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": " PG iter 000 | eta +0.0034 | len 14.8 | lines 0.05 | steps 295 | target-KL 0.01\n PG iter 006 | eta +0.0098 | len 15.3 | lines 0.15 | steps 306 | target-KL 0.01\n PG iter 012 | eta +0.0224 | len 17.9 | lines 0.40 | steps 357 | target-KL 0.01\n PG iter 018 | eta +0.0744 | len 21.5 | lines 1.60 | steps 430 | target-KL 0.01\n PG iter 024 | eta +0.1374 | len 28.8 | lines 3.95 | steps 575 | target-KL 0.01\n PG iter 030 | eta +0.2062 | len 40.2 | lines 8.30 | steps 805 | target-KL 0.01\n PG iter 036 | eta +0.2092 | len 42.5 | lines 8.90 | steps 851 | target-KL 0.01\n PG iter 042 | eta +0.2554 | len 55.2 | lines 14.10 | steps 1104 | target-KL 0.01\n PG iter 048 | eta +0.2849 | len 70.5 | lines 20.10 | steps 1411 | target-KL 0.01\n PG iter 054 | eta +0.2921 | len 75.2 | lines 21.95 | steps 1503 | target-KL 0.01\n PG iter 059 | eta +0.3069 | len 87.0 | lines 26.70 | steps 1740 | target-KL 0.01\nNPG iter 000 | eta +0.0034 | len 14.8 | lines 0.05 | steps 295 | target-KL 0.01\nNPG iter 006 | eta +0.0363 | len 17.9 | lines 0.65 | steps 358 | target-KL 0.01\nNPG iter 012 | eta +0.0766 | len 21.6 | lines 1.65 | steps 431 | target-KL 0.01\nNPG iter 018 | eta +0.1965 | len 37.1 | lines 7.30 | steps 743 | target-KL 0.01\nNPG iter 024 | eta +0.2751 | len 62.7 | lines 17.25 | steps 1254 | target-KL 0.01\nNPG iter 030 | eta +0.3075 | len 88.3 | lines 27.15 | steps 1766 | target-KL 0.01\nNPG iter 036 | eta +0.3193 | len 102.0 | lines 32.55 | steps 2039 | target-KL 0.01\nNPG iter 042 | eta +0.3401 | len 129.8 | lines 44.15 | steps 2596 | target-KL 0.01\nNPG iter 048 | eta +0.3511 | len 167.9 | lines 58.95 | steps 3358 | target-KL 0.01\nNPG iter 054 | eta +0.3557 | len 185.7 | lines 66.05 | steps 3714 | target-KL 0.01\nNPG iter 059 | eta +0.3494 | len 162.7 | lines 56.85 | steps 3254 | target-KL 0.01\n"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 2000x400 with 4 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 2000x400 with 4 Axes>"
+  },
+  {
+    "source_cell": 20,
+    "text": "Evaluating 100 grid points.\nEach grid point uses 6 episodes.\nTotal evaluation episodes: 600.\nArrow scaling: fixed alpha: PG=0.05, NPG=0.5\nEmpirical contour evaluation finished in 4.7s.\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "<Figure size 800x700 with 2 Axes>"
+  },
+  {
+    "source_cell": 20,
+    "text": "Center batch diagnostics\n------------------------\neta_hat:        +0.060606\nmean length:    19.80\nmean lines:     1.20\nn steps:        396\n\nArrow diagnostics\n-----------------\nPG predicted improvement g^T delta:  +0.000003\nNPG predicted improvement g^T delta: +0.004333\n\nEmpirical landscape diagnostics\n-------------------------------\nbest mean_return:  +2.333333\nEvaluating 100 grid points.\nEach grid point uses 6 episodes.\nTotal evaluation episodes: 600.\nArrow scaling: target-KL=0.01\nEmpirical contour evaluation finished in 42.5s.\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "<Figure size 800x700 with 2 Axes>"
+  },
+  {
+    "source_cell": 20,
+    "text": "Center batch diagnostics\n------------------------\neta_hat:        +0.336154\nmean length:    130.00\nmean lines:     43.70\nn steps:        2600\n\nArrow diagnostics\n-----------------\nPG predicted improvement g^T delta:  +0.031347\nNPG predicted improvement g^T delta: +0.036140\n\nEmpirical landscape diagnostics\n-------------------------------\nbest mean_return:  +100.500000\n"
+  },
+  {
+    "source_cell": 22,
+    "text": "<Figure size 1800x400 with 4 Axes>"
+  },
+  {
+    "source_cell": 22,
+    "text": "Top actions ranked by compatible approximation f(s,a;w):\n 1. action 29 rot=3 x= 4 f=+0.1708 p0=0.0000\n 2. action 12 rot=1 x= 4 f=+0.1475 p0=0.0000\n 3. action 30 rot=3 x= 5 f=+0.1454 p0=0.0000\n 4. action 28 rot=3 x= 3 f=+0.1384 p0=0.0000\n 5. action 13 rot=1 x= 5 f=+0.1327 p0=0.0000\n 6. action 14 rot=1 x= 6 f=+0.1314 p0=0.0000\n 7. action 11 rot=1 x= 3 f=+0.1283 p0=0.0000\n 8. action 22 rot=2 x= 5 f=+0.1253 p0=0.0000\n 9. action 25 rot=3 x= 0 f=+0.1241 p0=0.0000\n10. action 23 rot=2 x= 6 f=+0.1223 p0=0.0000\n"
+  }
+]

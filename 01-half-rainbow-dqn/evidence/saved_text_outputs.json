@@ -1,0 +1,98 @@
+[
+  {
+    "source_cell": 3,
+    "text": "Using device: cuda\n"
+  },
+  {
+    "source_cell": 7,
+    "text": "Action space: Discrete(4)\nNumber of actions: 4\nObservation space: Box([ -2.5        -2.5       -10.        -10.         -6.2831855 -10.\n  -0.         -0.       ], [ 2.5        2.5       10.        10.         6.2831855 10.\n  1.         1.       ], (8,), float32)\nObservation dimension: 8\n\nInitial state:\n[ 0.00229702  1.4181306   0.2326471   0.3204666  -0.00265488 -0.05269805\n  0.          0.        ]\nState shape: (8,)\n\nOne random step:\nAction: 3\nNext state shape: (8,)\nReward: 0.4747737628440245\nTerminated: False\nTruncated: False\nDone: False\nSaved video to: random_rollout.mp4\nEpisode length: 112\nTotal reward: -92.77391114784764\n"
+  },
+  {
+    "source_cell": 7,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "source_cell": 16,
+    "text": "============================================================\nTRAINING SIMPLE DQN ON LUNAR LANDER\n============================================================\nState dim: 8, Action dim: 4\n\nEpisode 50/1000 | Score: 21.6 | Avg: -121.8 | Loss: 69.3242 | ε: 0.046\nEpisode 100/1000 | Score: -52.1 | Avg: -49.9 | Loss: 13.1692 | ε: 0.010\nEpisode 150/1000 | Score: -57.7 | Avg: -8.9 | Loss: 4.3022 | ε: 0.010\nEpisode 200/1000 | Score: 166.7 | Avg: 152.2 | Loss: 7.3639 | ε: 0.010\nEpisode 250/1000 | Score: 222.8 | Avg: 228.4 | Loss: 10.1467 | ε: 0.010\nEpisode 300/1000 | Score: 234.2 | Avg: 227.6 | Loss: 15.9202 | ε: 0.010\nEpisode 350/1000 | Score: 281.8 | Avg: 237.3 | Loss: 12.7956 | ε: 0.010\nEpisode 400/1000 | Score: 267.7 | Avg: 254.4 | Loss: 17.1406 | ε: 0.010\nEpisode 450/1000 | Score: 281.4 | Avg: 244.1 | Loss: 13.6462 | ε: 0.010\nEpisode 500/1000 | Score: 265.9 | Avg: 244.9 | Loss: 10.6823 | ε: 0.010\nEpisode 550/1000 | Score: 214.0 | Avg: 245.3 | Loss: 10.9027 | ε: 0.010\nEpisode 600/1000 | Score: 232.7 | Avg: 264.3 | Loss: 12.1250 | ε: 0.010\nEpisode 650/1000 | Score: 279.1 | Avg: 259.1 | Loss: 11.2709 | ε: 0.010\nEpisode 700/1000 | Score: 261.1 | Avg: 253.2 | Loss: 14.7519 | ε: 0.010\nEpisode 750/1000 | Score: 273.7 | Avg: 242.8 | Loss: 11.3622 | ε: 0.010\nEpisode 800/1000 | Score: 15.4 | Avg: 234.7 | Loss: 28.1038 | ε: 0.010\nEpisode 850/1000 | Score: 280.1 | Avg: 249.8 | Loss: 13.4604 | ε: 0.010\nEpisode 900/1000 | Score: 252.3 | Avg: 275.0 | Loss: 10.5036 | ε: 0.010\nEpisode 950/1000 | Score: 270.9 | Avg: 250.3 | Loss: 9.3883 | ε: 0.010\nEpisode 1000/1000 | Score: 270.4 | Avg: 275.0 | Loss: 15.1725 | ε: 0.010\nSaved video to: dqn.mp4\nEpisode length: 1000\nTotal reward: 150.8004018549156\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 16,
+    "text": "\nDQN Final Avg Score (last 50): 275.0\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "source_cell": 20,
+    "text": "============================================================\nTRAINING DOUBLE DQN ON LUNAR LANDER\n============================================================\nState dim: 8, Action dim: 4\n\nEpisode 50/1000 | Score: 58.7 | Avg: -114.3 | Loss: 23.6100 | ε: 0.065\nEpisode 100/1000 | Score: 210.0 | Avg: 91.2 | Loss: 22.0214 | ε: 0.010\nEpisode 150/1000 | Score: 247.6 | Avg: 216.5 | Loss: 14.9558 | ε: 0.010\nEpisode 200/1000 | Score: 229.3 | Avg: 243.6 | Loss: 15.3207 | ε: 0.010\nEpisode 250/1000 | Score: 244.3 | Avg: 230.9 | Loss: 15.3549 | ε: 0.010\nEpisode 300/1000 | Score: 227.0 | Avg: 214.2 | Loss: 9.4964 | ε: 0.010\nEpisode 350/1000 | Score: 304.0 | Avg: 219.9 | Loss: 11.7861 | ε: 0.010\nEpisode 400/1000 | Score: 277.7 | Avg: 270.4 | Loss: 13.5374 | ε: 0.010\nEpisode 450/1000 | Score: 32.5 | Avg: 245.7 | Loss: 18.6542 | ε: 0.010\nEpisode 500/1000 | Score: 55.7 | Avg: 172.8 | Loss: 20.4000 | ε: 0.010\nEpisode 550/1000 | Score: 238.6 | Avg: 243.5 | Loss: 15.3004 | ε: 0.010\nEpisode 600/1000 | Score: 234.4 | Avg: 258.6 | Loss: 30.0835 | ε: 0.010\nEpisode 650/1000 | Score: 304.2 | Avg: 248.3 | Loss: 29.7905 | ε: 0.010\nEpisode 700/1000 | Score: 264.5 | Avg: 272.5 | Loss: 18.7500 | ε: 0.010\nEpisode 750/1000 | Score: 292.5 | Avg: 247.9 | Loss: 19.9046 | ε: 0.010\nEpisode 800/1000 | Score: 288.5 | Avg: 233.6 | Loss: 22.9935 | ε: 0.010\nEpisode 850/1000 | Score: 270.6 | Avg: 266.1 | Loss: 19.7618 | ε: 0.010\nEpisode 900/1000 | Score: 262.7 | Avg: 268.9 | Loss: 20.2236 | ε: 0.010\nEpisode 950/1000 | Score: 272.5 | Avg: 240.3 | Loss: 23.7842 | ε: 0.010\nEpisode 1000/1000 | Score: 29.0 | Avg: 201.3 | Loss: 17.4301 | ε: 0.010\nSaved video to: ddqn.mp4\nEpisode length: 116\nTotal reward: 17.28052907942812\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 20,
+    "text": "\nDDQN Final Avg Score (last 50): 201.3\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "============================================================\nTRAINING DUELING DQN ON LUNAR LANDER\n============================================================\nEpisode 50/1000 | Score: 198.0 | Avg: -85.7 | Loss: 20.6328 | ε: 0.010\nEpisode 100/1000 | Score: 192.1 | Avg: 31.2 | Loss: 19.4536 | ε: 0.010\nEpisode 150/1000 | Score: 167.8 | Avg: 179.2 | Loss: 23.1685 | ε: 0.010\nEpisode 200/1000 | Score: 232.1 | Avg: 252.0 | Loss: 17.3948 | ε: 0.010\nEpisode 250/1000 | Score: 226.6 | Avg: 107.4 | Loss: 28.9378 | ε: 0.010\nEpisode 300/1000 | Score: 279.6 | Avg: 215.5 | Loss: 29.1703 | ε: 0.010\nEpisode 350/1000 | Score: 304.9 | Avg: 229.1 | Loss: 13.7227 | ε: 0.010\nEpisode 400/1000 | Score: 285.8 | Avg: 204.7 | Loss: 33.0689 | ε: 0.010\nEpisode 450/1000 | Score: 296.4 | Avg: 256.4 | Loss: 18.2020 | ε: 0.010\nEpisode 500/1000 | Score: 286.9 | Avg: 244.7 | Loss: 121.0144 | ε: 0.010\nEpisode 550/1000 | Score: 246.1 | Avg: 232.1 | Loss: 23.7889 | ε: 0.010\nEpisode 600/1000 | Score: 242.2 | Avg: 243.2 | Loss: 16.9303 | ε: 0.010\nEpisode 650/1000 | Score: 313.8 | Avg: 225.8 | Loss: 29.0258 | ε: 0.010\nEpisode 700/1000 | Score: 262.2 | Avg: 220.1 | Loss: 20.8610 | ε: 0.010\nEpisode 750/1000 | Score: 297.6 | Avg: 229.8 | Loss: 25.6708 | ε: 0.010\nEpisode 800/1000 | Score: 274.8 | Avg: 268.0 | Loss: 24.5851 | ε: 0.010\nEpisode 850/1000 | Score: 278.3 | Avg: 273.4 | Loss: 18.6339 | ε: 0.010\nEpisode 900/1000 | Score: 258.6 | Avg: 278.0 | Loss: 29.4995 | ε: 0.010\nEpisode 950/1000 | Score: 276.0 | Avg: 280.3 | Loss: 18.2220 | ε: 0.010\nEpisode 1000/1000 | Score: 291.4 | Avg: 235.9 | Loss: 17.9962 | ε: 0.010\nSaved video to: duelingdqn.mp4\nEpisode length: 181\nTotal reward: 275.44774339974094\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 24,
+    "text": "\nDueling DQN Final Avg Score (last 50): 235.9\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "source_cell": 31,
+    "text": "============================================================\nTRAINING PER DQN ON LUNAR LANDER\n============================================================\nEpisode 50/1000 | Score: -50.9 | Avg: -92.4 | Loss: 3.2881 | ε: 0.052\nEpisode 100/1000 | Score: -154.9 | Avg: 44.5 | Loss: 1.5832 | ε: 0.010\nEpisode 150/1000 | Score: 278.9 | Avg: 139.1 | Loss: 1.8466 | ε: 0.010\nEpisode 200/1000 | Score: 238.1 | Avg: 212.8 | Loss: 2.1174 | ε: 0.010\nEpisode 250/1000 | Score: 267.2 | Avg: 209.3 | Loss: 1.7253 | ε: 0.010\nEpisode 300/1000 | Score: 260.8 | Avg: 196.1 | Loss: 2.2393 | ε: 0.010\nEpisode 350/1000 | Score: -72.4 | Avg: 243.5 | Loss: 2.1620 | ε: 0.010\nEpisode 400/1000 | Score: 277.5 | Avg: 268.0 | Loss: 1.7970 | ε: 0.010\nEpisode 450/1000 | Score: 280.3 | Avg: 247.8 | Loss: 1.5321 | ε: 0.010\nEpisode 500/1000 | Score: 279.7 | Avg: 271.3 | Loss: 0.9960 | ε: 0.010\nEpisode 550/1000 | Score: 231.3 | Avg: 219.4 | Loss: 1.3065 | ε: 0.010\nEpisode 600/1000 | Score: 215.0 | Avg: 163.6 | Loss: 2.0503 | ε: 0.010\nEpisode 650/1000 | Score: 304.6 | Avg: 254.6 | Loss: 1.7812 | ε: 0.010\nEpisode 700/1000 | Score: 258.8 | Avg: 217.4 | Loss: 1.6795 | ε: 0.010\nEpisode 750/1000 | Score: 268.3 | Avg: 255.4 | Loss: 1.3240 | ε: 0.010\nEpisode 800/1000 | Score: 285.3 | Avg: 263.3 | Loss: 1.2764 | ε: 0.010\nEpisode 850/1000 | Score: 276.0 | Avg: 254.6 | Loss: 1.1261 | ε: 0.010\nEpisode 900/1000 | Score: 260.0 | Avg: 270.5 | Loss: 0.9174 | ε: 0.010\nEpisode 950/1000 | Score: 268.9 | Avg: 269.5 | Loss: 1.0174 | ε: 0.010\nEpisode 1000/1000 | Score: 280.0 | Avg: 267.7 | Loss: 1.0022 | ε: 0.010\nSaved video to: perdqn.mp4\nEpisode length: 226\nTotal reward: 263.60947522065146\n"
+  },
+  {
+    "source_cell": 31,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 31,
+    "text": "\nPER DQN Final Avg Score (last 50): 267.7\n"
+  },
+  {
+    "source_cell": 31,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "source_cell": 35,
+    "text": "============================================================\nTRAINING HALF-RAINBOW DQN ON LUNAR LANDER\n============================================================\nState dim: 8, Action dim: 4\n\nEpisode 50/1000 | Score: 114.8 | Avg: -117.2 | Loss: 1.9493 | ε: 0.015\nEpisode 100/1000 | Score: 225.7 | Avg: 93.9 | Loss: 2.6746 | ε: 0.010\nEpisode 150/1000 | Score: -14.5 | Avg: 155.4 | Loss: 2.7777 | ε: 0.010\nEpisode 200/1000 | Score: 206.6 | Avg: 182.6 | Loss: 3.0869 | ε: 0.010\nEpisode 250/1000 | Score: 234.0 | Avg: 244.9 | Loss: 3.1012 | ε: 0.010\nEpisode 300/1000 | Score: 259.5 | Avg: 254.0 | Loss: 2.3273 | ε: 0.010\nEpisode 350/1000 | Score: 66.1 | Avg: 245.3 | Loss: 1.9722 | ε: 0.010\nEpisode 400/1000 | Score: 281.1 | Avg: 231.0 | Loss: 2.7572 | ε: 0.010\nEpisode 450/1000 | Score: 301.6 | Avg: 244.8 | Loss: 2.1278 | ε: 0.010\nEpisode 500/1000 | Score: 290.3 | Avg: 272.8 | Loss: 1.9659 | ε: 0.010\nEpisode 550/1000 | Score: 239.3 | Avg: 280.6 | Loss: 1.8841 | ε: 0.010\nEpisode 600/1000 | Score: 245.2 | Avg: 271.1 | Loss: 1.9011 | ε: 0.010\nEpisode 650/1000 | Score: 300.5 | Avg: 278.4 | Loss: 1.4304 | ε: 0.010\nEpisode 700/1000 | Score: 266.2 | Avg: 271.7 | Loss: 1.5972 | ε: 0.010\nEpisode 750/1000 | Score: 301.2 | Avg: 265.2 | Loss: 1.3337 | ε: 0.010\nEpisode 800/1000 | Score: 293.1 | Avg: 267.3 | Loss: 1.8083 | ε: 0.010\nEpisode 850/1000 | Score: 283.0 | Avg: 272.2 | Loss: 1.8421 | ε: 0.010\nEpisode 900/1000 | Score: 255.2 | Avg: 276.5 | Loss: 1.9582 | ε: 0.010\nEpisode 950/1000 | Score: 258.5 | Avg: 272.7 | Loss: 1.5561 | ε: 0.010\nEpisode 1000/1000 | Score: 291.0 | Avg: 252.8 | Loss: 1.8269 | ε: 0.010\nSaved video to: half_rainbow.mp4\nEpisode length: 190\nTotal reward: 275.55671964627527\n"
+  },
+  {
+    "source_cell": 35,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 35,
+    "text": "\nHalf-Rainbow Final Avg Score Last 50: 252.8\n"
+  },
+  {
+    "source_cell": 35,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "source_cell": 37,
+    "text": "\n======================================================================\nFINAL SUMMARY - ALL METHODS COMPARISON\n======================================================================\nMethod               Avg Score (last 50)       Status         \n----------------------------------------------------------------------\nDQN                  275.0                     Basic          \nDouble DQN           201.3                     Reduced overestimation\nDueling DQN          235.9                     Better V(s) estimation\nPER DQN              267.7                     Better sampling\nCombined             252.8                     All techniques \n======================================================================\nTarget Score: 200 (solved)\n"
+  },
+  {
+    "source_cell": 37,
+    "text": "<Figure size 1400x1000 with 4 Axes>"
+  }
+]

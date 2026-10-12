@@ -1,0 +1,7 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+torch
+numpy
+matplotlib
+opencv-python
+gymnasium[box2d]
+jupyterlab

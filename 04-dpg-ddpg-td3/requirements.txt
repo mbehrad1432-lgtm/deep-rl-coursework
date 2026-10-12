@@ -1,0 +1,6 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+torch
+numpy
+matplotlib
+gymnasium[mujoco]
+jupyterlab

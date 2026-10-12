@@ -1,0 +1,38 @@
+[
+  {
+    "source_cell": 4,
+    "text": "Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.\nPlease upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.\nUsers of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.\nSee the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.\n"
+  },
+  {
+    "source_cell": 4,
+    "text": "device(type='cuda')"
+  },
+  {
+    "source_cell": 15,
+    "text": "Observation Space: Box([-4.8000002e+00 -3.4028235e+38 -4.1887903e-01 -3.4028235e+38], [4.8000002e+00 3.4028235e+38 4.1887903e-01 3.4028235e+38], (4,), float32)\nAction Space: Discrete(2)\n"
+  },
+  {
+    "source_cell": 44,
+    "text": "--- Training REINFORCE: No Causality (Full Return) ---\n"
+  },
+  {
+    "source_cell": 45,
+    "text": "--- Training REINFORCE: With Causality (No Baseline) ---\n"
+  },
+  {
+    "source_cell": 46,
+    "text": "--- Training REINFORCE: Constant Baseline ---\n"
+  },
+  {
+    "source_cell": 47,
+    "text": "--- Training REINFORCE: Learned Baseline ---\n"
+  },
+  {
+    "source_cell": 49,
+    "text": "<Figure size 1400x700 with 1 Axes>"
+  },
+  {
+    "source_cell": 50,
+    "text": "No Causality: mean_reward = 58.7 +/- 28.5\nNo Baseline: mean_reward = 283.8 +/- 172.2\nConstant Baseline: mean_reward = 284.1 +/- 190.0\nLearned Baseline: mean_reward = 343.3 +/- 186.6\n"
+  }
+]

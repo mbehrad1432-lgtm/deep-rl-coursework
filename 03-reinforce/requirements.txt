@@ -1,0 +1,8 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+torch
+numpy
+matplotlib
+imageio
+imageio-ffmpeg
+gym[classic_control]
+jupyterlab

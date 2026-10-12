@@ -1,0 +1,11 @@
+{
+  "folder": "01-half-rainbow-dqn",
+  "source": "HalfRainbowDQN.ipynb",
+  "source_sha256": "926c3147e336e3dc7d7ef1fd0699b715be760953ece0e1d8aba28c40b151adbd",
+  "code_cells": 22,
+  "nonempty_unexecuted_source_cells": [
+    13
+  ],
+  "saved_errors": [],
+  "mode": "static review; not rerun"
+}

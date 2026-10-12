@@ -1,0 +1,10 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+numpy
+matplotlib
+seaborn
+tqdm
+gymnasium[toy-text]
+imageio
+imageio-ffmpeg
+pygame
+jupyterlab
