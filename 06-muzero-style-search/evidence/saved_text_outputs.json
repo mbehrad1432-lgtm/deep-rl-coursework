@@ -1,0 +1,18 @@
+[
+  {
+    "source_cell": 4,
+    "text": "Using device: cuda\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "[none] Episode 300/300 | mean(last 25) = 15.2\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "<Figure size 800x400 with 1 Axes>"
+  },
+  {
+    "source_cell": 24,
+    "text": "<Figure size 1000x600 with 1 Axes>"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "folder": "09-offline-ddpg-bc",
+  "source": "DDPG + Behavior Cloning_comp.ipynb",
+  "source_sha256": "e3530990f4ea39aaecefce7fae93b576a45d21ad4568531dd740d0ae9150bac8",
+  "code_cells": 23,
+  "nonempty_unexecuted_source_cells": [
+    0
+  ],
+  "saved_errors": [],
+  "mode": "static review; not rerun"
+}

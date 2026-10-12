@@ -1,0 +1,86 @@
+[
+  {
+    "source_cell": 2,
+    "text": "obs_dim=4, n_actions=2\n"
+  },
+  {
+    "source_cell": 6,
+    "text": "random policy: 19.0  (sanity check passed)\n"
+  },
+  {
+    "source_cell": 8,
+    "text": "rollout ok: 14 episodes finished, mean return 21.3\n"
+  },
+  {
+    "source_cell": 10,
+    "text": "GAE sanity checks passed\n"
+  },
+  {
+    "source_cell": 14,
+    "text": "iter   1 | rollout return   19.7\niter   5 | rollout return   70.8\niter  10 | rollout return  260.9\niter  15 | rollout return  183.6\niter  20 | rollout return  168.4\niter  25 | rollout return  213.3\niter  30 | rollout return  475.8 | greedy eval  500.0\n\ntrained in 33s\nexpert greedy return over 20 episodes: 499.6 / 500\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "621 expert (s,a) pairs from 25 episodes, mean demo return 493.8\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "discriminator shape checks passed\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "gradient penalty ok: 0.690\n"
+  },
+  {
+    "source_cell": 22,
+    "text": "discriminator update ok: {'loss': 0.208207368850708, 'acc_expert': 1.0, 'acc_policy': 1.0}\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "surrogate reward checks passed\n"
+  },
+  {
+    "source_cell": 26,
+    "text": "iter   5 | env   62.1 | eval  194.0 | D acc 0.01/0.85\niter  10 | env  239.5 | eval  193.8 | D acc 0.00/0.79\niter  15 | env  170.9 | eval  179.8 | D acc 0.23/0.83\niter  20 | env  130.6 | eval  192.8 | D acc 0.37/0.83\niter  25 | env  209.3 | eval  332.8 | D acc 0.43/0.88\niter  30 | env  461.8 | eval  500.0 | D acc 0.44/0.79\niter  35 | env  500.0 | eval  500.0 | D acc 0.42/0.64\niter  40 | env  417.0 | eval  500.0 | D acc 0.37/0.71\niter  45 | env  500.0 | eval  500.0 | D acc 0.21/0.62\niter  50 | env  500.0 | eval  500.0 | D acc 0.07/0.55\niter  55 | env  500.0 | eval  500.0 | D acc 0.00/0.79\niter  60 | env  230.4 | eval  500.0 | D acc 0.42/0.87\n\nGAIL trained in 66s\nGAIL greedy eval over 20 episodes: 500.0 / 500  (expert: 499.6)\n"
+  },
+  {
+    "source_cell": 28,
+    "text": "<Figure size 1000x600 with 4 Axes>"
+  },
+  {
+    "source_cell": 30,
+    "text": "airl reward final greedy eval: 9.3\nlogd reward final greedy eval: 9.3\n"
+  },
+  {
+    "source_cell": 30,
+    "text": "<Figure size 700x400 with 1 Axes>"
+  },
+  {
+    "source_cell": 32,
+    "text": "<Figure size 700x400 with 1 Axes>"
+  },
+  {
+    "source_cell": 32,
+    "text": " 1 demo episode(s) ( 25 pairs) -> greedy eval  500.0\n 3 demo episode(s) ( 75 pairs) -> greedy eval  449.8\n10 demo episode(s) (250 pairs) -> greedy eval  500.0\n"
+  },
+  {
+    "source_cell": 34,
+    "text": "<Figure size 1200x360 with 3 Axes>"
+  },
+  {
+    "source_cell": 36,
+    "text": "<Figure size 1000x400 with 3 Axes>"
+  },
+  {
+    "source_cell": 36,
+    "text": "Interpretation: GAIL only needs a reliable local signal near the expert occupancy manifold, where the final policy also spends most of its time; deviations are pushed back toward that support. Far from the data, the map is unconstrained extrapolation. Because this discriminator reward entangles expert occupancy with the training dynamics, unlike AIRL's structured recovered reward it should not be expected to transfer to changed environment dynamics.\n"
+  },
+  {
+    "source_cell": 38,
+    "text": "expert (PPO on true reward)             499.6\nGAIL 'gail' reward, 621 pairs           500.0\nGAIL 'airl' reward                        9.3\nGAIL 'logd' reward                        9.3\nGAIL, 1 demo episode (25 pairs)         500.0\nGAIL, 3 demo episodes                   449.8\nGAIL, 10 demo episodes                  500.0\n"
+  },
+  {
+    "source_cell": 38,
+    "text": "<Figure size 700x320 with 1 Axes>"
+  }
+]

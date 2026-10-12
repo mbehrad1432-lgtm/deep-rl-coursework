@@ -1,0 +1,118 @@
+[
+  {
+    "source_cell": 2,
+    "text": "torch 2.7.1+cu126 | device: cuda\n"
+  },
+  {
+    "source_cell": 4,
+    "text": "<Figure size 1100x520 with 2 Axes>"
+  },
+  {
+    "source_cell": 6,
+    "text": "Overwriting hw/student_metric.py\n"
+  },
+  {
+    "source_cell": 7,
+    "text": "coverage=0.5000  entropy=2.1219 bits\ncoverage_entropy OK\n"
+  },
+  {
+    "source_cell": 9,
+    "text": "Overwriting hw/student_rnd.py\n"
+  },
+  {
+    "source_cell": 10,
+    "text": "DeepSea(N=6) reference_return=0.9900 intrinsic_coef=1.0 device=cuda\nstep    5000 | episodes   833 | eps 0.604 | int_std  0.0005 | mean100 return  0.0955 | reference 0.9900 | time 0:00:17\nstep   10000 | episodes  1666 | eps 0.208 | int_std  0.0003 | mean100 return  0.5030 | reference 0.9900 | time 0:00:39\nstep   15000 | episodes  2500 | eps 0.050 | int_std  0.0003 | mean100 return  0.8807 | reference 0.9900 | time 0:01:01\n  checkpoint -> checkpoints\\quicktest_rnd\\step_00015000.pt\nRND greedy return = 0.990  (reference 0.990)\nRND quick test OK\n"
+  },
+  {
+    "source_cell": 12,
+    "text": "Overwriting hw/student_bootstrap.py\n"
+  },
+  {
+    "source_cell": 13,
+    "text": "DeepSea(N=6) reference_return=0.9900 heads=5 prior_scale=3.0 device=cuda\nstep    5000 | episodes   833 | heads  5 | mean100 return  0.9916 | reference 0.9900 | time 0:01:02\n  checkpoint -> checkpoints\\quicktest_boot\\step_00008000.pt\nBootstrap head-0 greedy return = 0.992  (reference 0.990)\nBootstrap quick test OK\n"
+  },
+  {
+    "source_cell": 15,
+    "text": "\n===== NORMAL DeepSea (N=15) =====\nexperiment[deepsea]: 3 agents x 1 sizes x 4 seeds = 12 runs, 20000 steps each, workers=4\n    ... still training: 0/12 runs done (30s elapsed)\n    ... still training: 0/12 runs done (60s elapsed)\n[1/12] double_dqn n=15 seed=42: saved results\\normal\\runs\\double_dqn\\n15_seed42.npz\n[2/12] double_dqn n=15 seed=1: saved results\\normal\\runs\\double_dqn\\n15_seed1.npz\n[3/12] double_dqn n=15 seed=0: saved results\\normal\\runs\\double_dqn\\n15_seed0.npz\n[4/12] double_dqn n=15 seed=2: saved results\\normal\\runs\\double_dqn\\n15_seed2.npz\n    ... still training: 4/12 runs done (104s elapsed)\n    ... still training: 4/12 runs done (134s elapsed)\n    ... still training: 4/12 runs done (164s elapsed)\n[5/12] rnd_dqn n=15 seed=0: saved results\\normal\\runs\\rnd_dqn\\n15_seed0.npz\n[6/12] rnd_dqn n=15 seed=2: saved results\\normal\\runs\\rnd_dqn\\n15_seed2.npz\n[7/12] rnd_dqn n=15 seed=1: saved results\\normal\\runs\\rnd_dqn\\n15_seed1.npz\n[8/12] rnd_dqn n=15 seed=42: saved results\\normal\\runs\\rnd_dqn\\n15_seed42.npz\n    ... still training: 8/12 runs done (212s elapsed)\n    ... still training: 8/12 runs done (242s elapsed)\n    ... still training: 8/12 runs done (272s elapsed)\n    ... still training: 8/12 runs done (302s elapsed)\n    ... still training: 8/12 runs done (332s elapsed)\n    ... still training: 8/12 runs done (362s elapsed)\n    ... still training: 8/12 runs done (392s elapsed)\n    ... still training: 8/12 runs done (422s elapsed)\n    ... still training: 8/12 runs done (452s elapsed)\n    ... still training: 8/12 runs done (482s elapsed)\n[9/12] bootstrap_dqn n=15 seed=0: saved results\\normal\\runs\\bootstrap_dqn\\n15_seed0.npz\n[10/12] bootstrap_dqn n=15 seed=1: saved results\\normal\\runs\\bootstrap_dqn\\n15_seed1.npz\n[11/12] bootstrap_dqn n=15 seed=42: saved results\\normal\\runs\\bootstrap_dqn\\n15_seed42.npz\n[12/12] bootstrap_dqn n=15 seed=2: saved results\\normal\\runs\\bootstrap_dqn\\n15_seed2.npz\nexperiment done in 515s -> results\\normal\n\n===== NOISY DeepSea (N=15) =====\nexperiment[deepsea]: 3 agents x 1 sizes x 4 seeds = 12 runs, 20000 steps each, workers=4\n    ... still training: 0/12 runs done (30s elapsed)\n    ... still training: 0/12 runs done (60s elapsed)\n[1/12] double_dqn n=15 seed=0: saved results\\noisy\\runs\\double_dqn\\n15_seed0.npz\n[2/12] double_dqn n=15 seed=2: saved results\\noisy\\runs\\double_dqn\\n15_seed2.npz\n[3/12] double_dqn n=15 seed=42: saved results\\noisy\\runs\\double_dqn\\n15_seed42.npz\n[4/12] double_dqn n=15 seed=1: saved results\\noisy\\runs\\double_dqn\\n15_seed1.npz\n    ... still training: 4/12 runs done (110s elapsed)\n    ... still training: 4/12 runs done (140s elapsed)\n    ... still training: 4/12 runs done (170s elapsed)\n[5/12] rnd_dqn n=15 seed=0: saved results\\noisy\\runs\\rnd_dqn\\n15_seed0.npz\n[6/12] rnd_dqn n=15 seed=2: saved results\\noisy\\runs\\rnd_dqn\\n15_seed2.npz\n[7/12] rnd_dqn n=15 seed=1: saved results\\noisy\\runs\\rnd_dqn\\n15_seed1.npz\n[8/12] rnd_dqn n=15 seed=42: saved results\\noisy\\runs\\rnd_dqn\\n15_seed42.npz\n    ... still training: 8/12 runs done (220s elapsed)\n    ... still training: 8/12 runs done (250s elapsed)\n    ... still training: 8/12 runs done (280s elapsed)\n    ... still training: 8/12 runs done (310s elapsed)\n    ... still training: 8/12 runs done (340s elapsed)\n    ... still training: 8/12 runs done (370s elapsed)\n    ... still training: 8/12 runs done (400s elapsed)\n    ... still training: 8/12 runs done (430s elapsed)\n    ... still training: 8/12 runs done (460s elapsed)\n    ... still training: 8/12 runs done (490s elapsed)\n[9/12] bootstrap_dqn n=15 seed=0: saved results\\noisy\\runs\\bootstrap_dqn\\n15_seed0.npz\n[10/12] bootstrap_dqn n=15 seed=1: saved results\\noisy\\runs\\bootstrap_dqn\\n15_seed1.npz\n[11/12] bootstrap_dqn n=15 seed=2: saved results\\noisy\\runs\\bootstrap_dqn\\n15_seed2.npz\n[12/12] bootstrap_dqn n=15 seed=42: saved results\\noisy\\runs\\bootstrap_dqn\\n15_seed42.npz\nexperiment done in 518s -> results\\noisy\n\n===== ANALYSIS =====\nanalysing DeepSea N=15 (3 agents)...\n  figure -> results\\normal\\figures\\performance_learning_curves.png\n  figure -> results\\normal\\figures\\performance_sample_efficiency.png\n  figure -> results\\normal\\figures\\exploration_coverage.png\n  figure -> results\\normal\\figures\\exploration_entropy.png\n  figure -> results\\normal\\figures\\exploration_heatmaps.png\n  figure -> results\\normal\\figures\\exploration_first_visit.png\n  figure -> results\\normal\\figures\\mechanism_deep_reach.png\n  figure -> results\\normal\\figures\\mechanism_intrinsic.png\n  figure -> results\\normal\\figures\\stability_variance.png\n  figure -> results\\normal\\figures\\rigor_iqm.png\n  figure -> results\\normal\\figures\\rigor_performance_profiles.png\n  figure -> results\\normal\\figures\\rigor_prob_improvement.png\nsummary -> results\\normal\\summary.json\nanalysing DeepSea N=15 (3 agents)...\n  figure -> results\\noisy\\figures\\performance_learning_curves.png\n  figure -> results\\noisy\\figures\\performance_sample_efficiency.png\n  figure -> results\\noisy\\figures\\exploration_coverage.png\n  figure -> results\\noisy\\figures\\exploration_entropy.png\n  figure -> results\\noisy\\figures\\exploration_heatmaps.png\n  figure -> results\\noisy\\figures\\exploration_first_visit.png\n  figure -> results\\noisy\\figures\\mechanism_deep_reach.png\n  figure -> results\\noisy\\figures\\mechanism_intrinsic.png\n  figure -> results\\noisy\\figures\\stability_variance.png\n  figure -> results\\noisy\\figures\\rigor_iqm.png\n  figure -> results\\noisy\\figures\\rigor_performance_profiles.png\n  figure -> results\\noisy\\figures\\rigor_prob_improvement.png\nsummary -> results\\noisy\\summary.json\n\nfull comparison done in 1039s\n"
+  },
+  {
+    "source_cell": 17,
+    "text": "################  NORMAL DeepSea  ################\n--- learning + coverage: results/normal ---\n"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": "--- visitation heatmaps: results/normal ---\n"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 1000x333.333 with 1 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": "--- statistical rigor: results/normal ---\n"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 800x445.714 with 1 Axes>"
+  },
+  {
+    "source_cell": 17,
+    "text": "<Figure size 800x445.714 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "################  NOISY-TV DeepSea  ################\n--- learning + coverage: results/noisy ---\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 800x514.286 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "--- visitation heatmaps: results/noisy ---\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 1000x333.333 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "--- statistical rigor: results/noisy ---\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 800x445.714 with 1 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "<Figure size 800x445.714 with 1 Axes>"
+  },
+  {
+    "source_cell": 19,
+    "text": "<Figure size 1200x460 with 2 Axes>"
+  },
+  {
+    "source_cell": 34,
+    "text": "wrote i:\\دانشگاه\\ترم 8\\Deep RL\\HW\\hw_6\\exploration_hw\\submission.zip  (1.40 MB)  student_number=[student ID removed]\nsubmit this file alongside the notebook: i:\\دانشگاه\\ترم 8\\Deep RL\\HW\\hw_6\\exploration_hw\\submission.zip\n"
+  }
+]

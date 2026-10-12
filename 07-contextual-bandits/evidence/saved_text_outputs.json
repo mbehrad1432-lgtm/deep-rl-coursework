@@ -1,0 +1,154 @@
+[
+  {
+    "source_cell": 1,
+    "text": "Device: cuda\n"
+  },
+  {
+    "source_cell": 2,
+    "text": "Config(base_dataset_name='cardiffnlp/tweet_eval', base_dataset_config='offensive', ood_dataset_name='cardiffnlp/tweet_eval', ood_dataset_config='hate', n_logged=6000, n_eval=2000, n_ood=2000, hash_dim=256, min_token_len=2, hidden=128, dropout_p=0.15, batch_size=256, reward_epochs=5, ensemble_epochs=3, risk_epochs=5, lr=0.001, weight_decay=0.0001, behavior_temperature=0.75, behavior_uniform_mix=0.1, epsilon=0.1, ensemble_size=3, mc_samples=10, unsafe_threshold=0.55, extreme_unsafe_threshold=0.8, safety_margin=0.05, linucb_alpha=0.6, linucb_l2=1.0, neuralucb_alpha=0.75, neural_feature_dim=128)"
+  },
+  {
+    "source_cell": 4,
+    "text": "Downloading TweetEval offensive/train from official GitHub raw files.\nDownloading TweetEval offensive/validation from official GitHub raw files.\nDownloading TweetEval offensive/test from official GitHub raw files.\nDownloading TweetEval hate/validation from official GitHub raw files.\nDownloading TweetEval hate/test from official GitHub raw files.\nLoaded real datasets:\n"
+  },
+  {
+    "source_cell": 4,
+    "text": "            split  rows  harmful_rate  \\\n0    logged_train  6000      0.331167   \n1  in_domain_eval  2000      0.317000   \n2   ood_hate_eval  2000      0.424000   \n\n                                      source  \n0       github_raw/tweeteval/offensive/train  \n1  github_raw/tweeteval/offensive/validation  \n2       github_raw/tweeteval/hate/validation  "
+  },
+  {
+    "source_cell": 4,
+    "text": "                                                   text  label  \\\n4503  @user Antifa thugs remind me of orcs if they a...      1   \n1424  13/? BOOOM.   The MAC telling the @user to pay...      0   \n4414  @user That’s why conservatives are so afraid o...      0   \n5914  @user You can’t pretend to care about women wh...      0   \n3768                   @user Diversity = Success?  LMAO      0   \n5729  @user And when did Breitbart become a reliable...      0   \n1491  . @user @user @user Fake conservatives and the...      1   \n3592  @user @user Insanity...just like the commies! ...      0   \n4378                                @user WHAT THE FUCK      1   \n318   @user Strange how Gun Control never works Crim...      0   \n\n                                    source  \n4503  github_raw/tweeteval/offensive/train  \n1424  github_raw/tweeteval/offensive/train  \n4414  github_raw/tweeteval/offensive/train  \n5914  github_raw/tweeteval/offensive/train  \n3768  github_raw/tweeteval/offensive/train  \n5729  github_raw/tweeteval/offensive/train  \n1491  github_raw/tweeteval/offensive/train  \n3592  github_raw/tweeteval/offensive/train  \n4378  github_raw/tweeteval/offensive/train  \n318   github_raw/tweeteval/offensive/train  "
+  },
+  {
+    "source_cell": 6,
+    "text": "            split  harmful_rate  mean_risk_score  mean_severity\n0          logged      0.331167         0.087517       0.178474\n1  in_domain_eval      0.317000         0.086598       0.170505\n2   ood_hate_eval      0.424000         0.081074       0.219749"
+  },
+  {
+    "source_cell": 8,
+    "text": "      split          profile  oracle_value  allow_rate  review_rate  \\\n0    logged         balanced      1.009497    0.668833          0.0   \n1    logged      high_safety      1.042302    0.668833          0.0   \n2    logged  free_expression      0.976912    0.668833          0.0   \n3      eval         balanced      1.008313    0.683000          0.0   \n4      eval      high_safety      1.032875    0.683000          0.0   \n5      eval  free_expression      0.983822    0.683000          0.0   \n6  ood_hate         balanced      1.009946    0.576000          0.0   \n7  ood_hate      high_safety      1.092790    0.576000          0.0   \n8  ood_hate  free_expression      0.926984    0.576000          0.0   \n\n   block_rate  \n0    0.331167  \n1    0.331167  \n2    0.331167  \n3    0.317000  \n4    0.317000  \n5    0.317000  \n6    0.424000  \n7    0.424000  \n8    0.424000  "
+  },
+  {
+    "source_cell": 10,
+    "text": "                                                text  label  \\\n0  @user So funny, this was labeled as sensitive ...      1   \n1  @user @user ...I happen to know of your waywar...      0   \n2  @user @user He/she deserves those tattoos. Hop...      0   \n3                              @user But gun control      0   \n4  @user He is hurt and no one has checked on him!!!      1   \n\n                                 source  n_tokens  risk_score  severity  \\\n0  github_raw/tweeteval/offensive/train        20    0.183333  0.550833   \n1  github_raw/tweeteval/offensive/train        48    0.050000  0.010000   \n2  github_raw/tweeteval/offensive/train        11    0.050000  0.010000   \n3  github_raw/tweeteval/offensive/train         4    0.050000  0.010000   \n4  github_raw/tweeteval/offensive/train        11    0.250000  0.587500   \n\n   has_risk_term  has_mention  has_hashtag  has_url  has_exclaim  \\\n0          False         True        False    False         True   \n1          False         True        False    False        False   \n2          False         True        False    False        False   \n3          False         True        False    False        False   \n4          False         True        False    False         True   \n\n   logged_action logged_action_name  propensity    reward  \\\n0              1             review    0.165479  0.222319   \n1              0              allow    0.780235  0.913426   \n2              2              block    0.117764 -1.613453   \n3              0              allow    0.780235  1.089645   \n4              0              allow    0.489166 -0.809872   \n\n   expected_logged_reward  oracle_action  oracle_value  logged_regret  \n0                0.160167              2      1.052958       0.892792  \n1                1.000000              0      1.000000       0.000000  \n2               -1.600000              0      1.000000       2.600000  \n3                1.000000              0      1.000000       0.000000  \n4               -0.707500              2      1.073125       1.780625  "
+  },
+  {
+    "source_cell": 10,
+    "text": "                        rate\nlogged_action_name          \nallow               0.727667\nblock               0.153833\nreview              0.118500"
+  },
+  {
+    "source_cell": 10,
+    "text": "        propensity\ncount  6000.000000\nmean      0.584559\nstd       0.273358\nmin       0.084684\n25%       0.294278\n50%       0.769711\n75%       0.780235\nmax       0.823309"
+  },
+  {
+    "source_cell": 12,
+    "text": "Feature shapes: (6000, 256) (2000, 256) (2000, 256)\n"
+  },
+  {
+    "source_cell": 14,
+    "text": "reward epoch 01/5 | mse=0.9722\nreward epoch 02/5 | mse=0.8350\nreward epoch 03/5 | mse=0.7965\nreward epoch 04/5 | mse=0.7816\nreward epoch 05/5 | mse=0.7573\n"
+  },
+  {
+    "source_cell": 14,
+    "text": "      allow    review     block\n0  0.224734  0.169678 -0.503191\n1  0.548896  0.304800 -0.938194\n2  0.630620  0.321746 -1.066366\n3  0.170268  0.145643 -0.378595\n4  0.276009  0.191466 -0.577861"
+  },
+  {
+    "source_cell": 16,
+    "text": "risk epoch 01/5 | bce=0.9264\nrisk epoch 02/5 | bce=0.9206\nrisk epoch 03/5 | bce=0.9034\nrisk epoch 04/5 | bce=0.8664\nrisk epoch 05/5 | bce=0.8417\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "      split  mean_predicted_risk  true_label_rate\n0      eval             0.491384            0.317\n1  ood_hate             0.572895            0.424"
+  },
+  {
+    "source_cell": 18,
+    "text": "trained ensemble member 1/3\ntrained ensemble member 2/3\ntrained ensemble member 3/3\nIn-domain fixed-policy evaluation\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "             policy     n  avg_reward  avg_regret  oracle_value  allow_rate  \\\n0            oracle  2000    1.008313    0.000000      1.008313      0.6830   \n1        greedy_mlp  2000    0.409210    0.599103      1.008313      0.8965   \n3    dropout_ts_mlp  2000    0.408049    0.600265      1.008313      0.8865   \n4   ensemble_ts_mlp  2000    0.398203    0.610110      1.008313      0.9985   \n2  epsilon_0.10_mlp  2000    0.358122    0.650191      1.008313      0.8295   \n\n   review_rate  block_rate  harmful_allow_rate  harmful_block_rate  \\\n0       0.0000       0.317            0.000000            1.000000   \n1       0.1035       0.000            0.850158            0.000000   \n3       0.1135       0.000            0.839117            0.000000   \n4       0.0015       0.000            1.000000            0.000000   \n2       0.1305       0.040            0.783912            0.039432   \n\n   benign_block_rate  \n0           0.000000  \n1           0.000000  \n3           0.000000  \n4           0.000000  \n2           0.040264  "
+  },
+  {
+    "source_cell": 18,
+    "text": "OOD hate fixed-policy evaluation\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "             policy     n  avg_reward  avg_regret  oracle_value  allow_rate  \\\n0            oracle  2000    1.009946    0.000000      1.009946      0.5760   \n3    dropout_ts_mlp  2000    0.224096    0.785850      1.009946      0.7695   \n1        greedy_mlp  2000    0.222128    0.787818      1.009946      0.7790   \n4   ensemble_ts_mlp  2000    0.193982    0.815964      1.009946      0.9930   \n2  epsilon_0.10_mlp  2000    0.185677    0.824270      1.009946      0.7235   \n\n   review_rate  block_rate  harmful_allow_rate  harmful_block_rate  \\\n0       0.0000       0.424            0.000000            1.000000   \n3       0.2305       0.000            0.741745            0.000000   \n1       0.2210       0.000            0.753538            0.000000   \n4       0.0070       0.000            0.990566            0.000000   \n2       0.2365       0.040            0.708726            0.038915   \n\n   benign_block_rate  \n0           0.000000  \n3           0.000000  \n1           0.000000  \n4           0.000000  \n2           0.040799  "
+  },
+  {
+    "source_cell": 20,
+    "text": "Mandatory safe exploration: in-domain\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                  policy     n  avg_reward  avg_regret  oracle_value  \\\n2    safe_dropout_ts_mlp  2000    0.388392    0.619921      1.008313   \n0        safe_greedy_mlp  2000    0.387505    0.620809      1.008313   \n3   safe_ensemble_ts_mlp  2000    0.386957    0.621356      1.008313   \n1  safe_epsilon_0.10_mlp  2000    0.346181    0.662132      1.008313   \n\n   allow_rate  review_rate  block_rate  harmful_allow_rate  \\\n2      0.6280       0.3560      0.0160            0.533123   \n0      0.6305       0.3535      0.0160            0.537855   \n3      0.6310       0.3530      0.0160            0.539432   \n1      0.5875       0.3540      0.0585            0.495268   \n\n   harmful_block_rate  benign_block_rate  \n2            0.025237           0.011713  \n0            0.025237           0.011713  \n3            0.025237           0.011713  \n1            0.077287           0.049780  "
+  },
+  {
+    "source_cell": 20,
+    "text": "Mandatory safe exploration: OOD hate\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                  policy     n  avg_reward  avg_regret  oracle_value  \\\n2    safe_dropout_ts_mlp  2000    0.208985    0.800962      1.009946   \n3   safe_ensemble_ts_mlp  2000    0.208058    0.801888      1.009946   \n0        safe_greedy_mlp  2000    0.207708    0.802238      1.009946   \n1  safe_epsilon_0.10_mlp  2000    0.160064    0.849883      1.009946   \n\n   allow_rate  review_rate  block_rate  harmful_allow_rate  \\\n2      0.4310       0.4925      0.0765            0.389151   \n3      0.4335       0.4900      0.0765            0.392689   \n0      0.4330       0.4905      0.0765            0.392689   \n1      0.4060       0.4775      0.1165            0.373821   \n\n   harmful_block_rate  benign_block_rate  \n2            0.088443           0.067708  \n3            0.088443           0.067708  \n0            0.088443           0.067708  \n1            0.116745           0.116319  "
+  },
+  {
+    "source_cell": 22,
+    "text": "            policy     t  action action_name  expected_reward  \\\n0       linucb_raw  2000       1      review              0.3   \n1  safe_linucb_raw  2000       1      review              0.3   \n\n   observed_reward  oracle_value  regret  cum_reward   cum_regret  \n0         0.197657           1.0     0.7  510.383018  1506.243713  \n1         0.197657           1.0     0.7  553.171025  1463.455702  "
+  },
+  {
+    "source_cell": 24,
+    "text": "Neural feature shapes: (6000, 128) (2000, 128) (2000, 128)\n"
+  },
+  {
+    "source_cell": 24,
+    "text": "                      policy     t  action action_name  expected_reward  \\\n0                 linucb_raw  2000       1      review              0.3   \n1       neuralucb_last_layer  2000       0       allow              1.0   \n2  safe_neuralucb_last_layer  2000       1      review              0.3   \n\n   observed_reward  oracle_value  regret  cum_reward   cum_regret  \n0         0.197657           1.0     0.7  510.383018  1506.243713  \n1         1.153220           1.0     0.0  708.011575  1308.615167  \n2         0.160758           1.0     0.7  767.597464  1249.029275  "
+  },
+  {
+    "source_cell": 26,
+    "text": "                policy  true_value       IPS     SNIPS        DM        DR  \\\n0           greedy_mlp    0.422596  0.425495  0.427686  0.364954  0.423596   \n1      safe_greedy_mlp    0.471436  0.483297  0.452615  0.344307  0.466770   \n2       dropout_ts_mlp    0.421597  0.426154  0.426169  0.364358  0.423451   \n3  safe_dropout_ts_mlp    0.471323  0.483676  0.452636  0.344171  0.466909   \n4      ensemble_ts_mlp    0.375591  0.369878  0.368587  0.362458  0.367278   \n\n   match_rate  \n0    0.666000  \n1    0.538833  \n2    0.660167  \n3    0.537167  \n4    0.727833  "
+  },
+  {
+    "source_cell": 28,
+    "text": "<Figure size 500x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 28,
+    "text": "<Figure size 500x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 28,
+    "text": "      split  ECE_10_bins  mean_pred  empirical_rate\n0      eval     0.174384   0.491384           0.317\n1  ood_hate     0.156422   0.572895           0.424"
+  },
+  {
+    "source_cell": 28,
+    "text": "   threshold  flag_rate  precision    recall  false_positive_rate  \\\n0       0.20     0.9985   0.317476  1.000000             0.997804   \n1       0.35     0.7745   0.342802  0.837539             0.745242   \n2       0.50     0.4695   0.374867  0.555205             0.429722   \n3       0.65     0.1855   0.439353  0.257098             0.152269   \n4       0.80     0.0160   0.500000  0.025237             0.011713   \n\n   mean_severity_flagged  \n0               0.170713  \n1               0.183313  \n2               0.198969  \n3               0.232768  \n4               0.267023  "
+  },
+  {
+    "source_cell": 28,
+    "text": "   threshold  flag_rate  precision    recall  false_positive_rate  \\\n0       0.20     1.0000   0.424000  1.000000             1.000000   \n1       0.35     0.8895   0.436762  0.916274             0.869792   \n2       0.50     0.6645   0.452220  0.708726             0.631944   \n3       0.65     0.3515   0.455192  0.377358             0.332465   \n4       0.80     0.0765   0.490196  0.088443             0.067708   \n\n   mean_severity_flagged  \n0               0.219749  \n1               0.225226  \n2               0.231702  \n3               0.233343  \n4               0.251320  "
+  },
+  {
+    "source_cell": 30,
+    "text": "             policy  avg_reward_eval  avg_regret_eval  allow_rate_eval  \\\n0            oracle         1.008313         0.000000           0.6830   \n2    dropout_ts_mlp         0.408049         0.600265           0.8865   \n1        greedy_mlp         0.409210         0.599103           0.8965   \n3   ensemble_ts_mlp         0.398203         0.610110           0.9985   \n4  epsilon_0.10_mlp         0.358122         0.650191           0.8295   \n\n   review_rate_eval  block_rate_eval  harmful_allow_rate_eval  \\\n0            0.0000            0.317                 0.000000   \n2            0.1135            0.000                 0.839117   \n1            0.1035            0.000                 0.850158   \n3            0.0015            0.000                 1.000000   \n4            0.1305            0.040                 0.783912   \n\n   benign_block_rate_eval  avg_reward_ood  avg_regret_ood  ...  \\\n0                0.000000        1.009946        0.000000  ...   \n2                0.000000        0.224096        0.785850  ...   \n1                0.000000        0.222128        0.787818  ...   \n3                0.000000        0.193982        0.815964  ...   \n4                0.040264        0.185677        0.824270  ...   \n\n   block_rate_ood  harmful_allow_rate_ood  benign_block_rate_ood  \\\n0           0.424                0.000000               0.000000   \n2           0.000                0.741745               0.000000   \n1           0.000                0.753538               0.000000   \n3           0.000                0.990566               0.000000   \n4           0.040                0.708726               0.040799   \n\n   delta_avg_reward_ood_minus_eval  delta_avg_regret_ood_minus_eval  \\\n0                         0.001633                         0.000000   \n2                        -0.183953                         0.185586   \n1                        -0.187083                         0.188716   \n3                        -0.204222                         0.205854   \n4                        -0.172446                         0.174079   \n\n   delta_allow_rate_ood_minus_eval  delta_review_rate_ood_minus_eval  \\\n0                          -0.1070                            0.0000   \n2                          -0.1170                            0.1170   \n1                          -0.1175                            0.1175   \n3                          -0.0055                            0.0055   \n4                          -0.1060                            0.1060   \n\n   delta_block_rate_ood_minus_eval  delta_harmful_allow_rate_ood_minus_eval  \\\n0                            0.107                                 0.000000   \n2                            0.000                                -0.097371   \n1                            0.000                                -0.096620   \n3                            0.000                                -0.009434   \n4                            0.000                                -0.075185   \n\n   delta_benign_block_rate_ood_minus_eval  \n0                                0.000000  \n2                                0.000000  \n1                                0.000000  \n3                                0.000000  \n4                                0.000535  \n\n[5 rows x 22 columns]"
+  },
+  {
+    "source_cell": 30,
+    "text": "                  policy  avg_reward_eval  avg_regret_eval  allow_rate_eval  \\\n0    safe_dropout_ts_mlp         0.388392         0.619921           0.6280   \n2   safe_ensemble_ts_mlp         0.386957         0.621356           0.6310   \n1        safe_greedy_mlp         0.387505         0.620809           0.6305   \n3  safe_epsilon_0.10_mlp         0.346181         0.662132           0.5875   \n\n   review_rate_eval  block_rate_eval  harmful_allow_rate_eval  \\\n0            0.3560           0.0160                 0.533123   \n2            0.3530           0.0160                 0.539432   \n1            0.3535           0.0160                 0.537855   \n3            0.3540           0.0585                 0.495268   \n\n   benign_block_rate_eval  avg_reward_ood  avg_regret_ood  ...  \\\n0                0.011713        0.208985        0.800962  ...   \n2                0.011713        0.208058        0.801888  ...   \n1                0.011713        0.207708        0.802238  ...   \n3                0.049780        0.160064        0.849883  ...   \n\n   block_rate_ood  harmful_allow_rate_ood  benign_block_rate_ood  \\\n0          0.0765                0.389151               0.067708   \n2          0.0765                0.392689               0.067708   \n1          0.0765                0.392689               0.067708   \n3          0.1165                0.373821               0.116319   \n\n   delta_avg_reward_ood_minus_eval  delta_avg_regret_ood_minus_eval  \\\n0                        -0.179407                         0.181040   \n2                        -0.178899                         0.180532   \n1                        -0.179796                         0.181429   \n3                        -0.186118                         0.187750   \n\n   delta_allow_rate_ood_minus_eval  delta_review_rate_ood_minus_eval  \\\n0                          -0.1970                            0.1365   \n2                          -0.1975                            0.1370   \n1                          -0.1975                            0.1370   \n3                          -0.1815                            0.1235   \n\n   delta_block_rate_ood_minus_eval  delta_harmful_allow_rate_ood_minus_eval  \\\n0                           0.0605                                -0.143972   \n2                           0.0605                                -0.146743   \n1                           0.0605                                -0.145166   \n3                           0.0580                                -0.121447   \n\n   delta_benign_block_rate_ood_minus_eval  \n0                                0.055995  \n2                                0.055995  \n1                                0.055995  \n3                                0.066539  \n\n[4 rows x 22 columns]"
+  },
+  {
+    "source_cell": 30,
+    "text": "                      policy   cum_regret  avg_regret\n3  safe_neuralucb_last_layer  1249.029275    0.624515\n2       neuralucb_last_layer  1308.615167    0.654308\n1            safe_linucb_raw  1463.455702    0.731728\n0                 linucb_raw  1506.243713    0.753122"
+  },
+  {
+    "source_cell": 30,
+    "text": "<Figure size 800x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 30,
+    "text": "       split         family                 policy  avg_reward  avg_regret  \\\n0       eval  unconstrained                 oracle    1.008313    0.000000   \n1       eval  unconstrained             greedy_mlp    0.409210    0.599103   \n2       eval  unconstrained         dropout_ts_mlp    0.408049    0.600265   \n3       eval  unconstrained        ensemble_ts_mlp    0.398203    0.610110   \n10      eval           safe    safe_dropout_ts_mlp    0.388392    0.619921   \n11      eval           safe        safe_greedy_mlp    0.387505    0.620809   \n12      eval           safe   safe_ensemble_ts_mlp    0.386957    0.621356   \n4       eval  unconstrained       epsilon_0.10_mlp    0.358122    0.650191   \n13      eval           safe  safe_epsilon_0.10_mlp    0.346181    0.662132   \n5   ood_hate  unconstrained                 oracle    1.009946    0.000000   \n6   ood_hate  unconstrained         dropout_ts_mlp    0.224096    0.785850   \n7   ood_hate  unconstrained             greedy_mlp    0.222128    0.787818   \n14  ood_hate           safe    safe_dropout_ts_mlp    0.208985    0.800962   \n15  ood_hate           safe   safe_ensemble_ts_mlp    0.208058    0.801888   \n16  ood_hate           safe        safe_greedy_mlp    0.207708    0.802238   \n8   ood_hate  unconstrained        ensemble_ts_mlp    0.193982    0.815964   \n9   ood_hate  unconstrained       epsilon_0.10_mlp    0.185677    0.824270   \n17  ood_hate           safe  safe_epsilon_0.10_mlp    0.160064    0.849883   \n\n    allow_rate  review_rate  block_rate  harmful_allow_rate  benign_block_rate  \n0       0.6830       0.0000      0.3170            0.000000           0.000000  \n1       0.8965       0.1035      0.0000            0.850158           0.000000  \n2       0.8865       0.1135      0.0000            0.839117           0.000000  \n3       0.9985       0.0015      0.0000            1.000000           0.000000  \n10      0.6280       0.3560      0.0160            0.533123           0.011713  \n11      0.6305       0.3535      0.0160            0.537855           0.011713  \n12      0.6310       0.3530      0.0160            0.539432           0.011713  \n4       0.8295       0.1305      0.0400            0.783912           0.040264  \n13      0.5875       0.3540      0.0585            0.495268           0.049780  \n5       0.5760       0.0000      0.4240            0.000000           0.000000  \n6       0.7695       0.2305      0.0000            0.741745           0.000000  \n7       0.7790       0.2210      0.0000            0.753538           0.000000  \n14      0.4310       0.4925      0.0765            0.389151           0.067708  \n15      0.4335       0.4900      0.0765            0.392689           0.067708  \n16      0.4330       0.4905      0.0765            0.392689           0.067708  \n8       0.9930       0.0070      0.0000            0.990566           0.000000  \n9       0.7235       0.2365      0.0400            0.708726           0.040799  \n17      0.4060       0.4775      0.1165            0.373821           0.116319  "
+  },
+  {
+    "source_cell": 30,
+    "text": "\nFinal analysis\n--------------\n1. The oracle row is the upper bound because it uses the simulator's full reward table for every context and action.\n2. Among learned static policies, lower average regret is better. In this run, the best in-domain non-online policy is oracle with avg_regret=0.0000; on OOD hate data, the best row is oracle with avg_regret=0.0000.\n3. Safe policies constrain actions using the risk model: high-risk examples cannot be allowed, and extreme-risk examples are blocked. This often reduces harmful_allow_rate but can increase benign_block_rate if the risk model is miscalibrated.\n4. IPS and SNIPS use only logged propensities and can be high-variance when the target policy rarely matches the logging policy. The Direct Method can be biased if Q_hat is wrong. Doubly Robust combines both and is usually more stable.\n5. OOD results and calibration plots are critical: a risk model trained on offensive tweets may be miscalibrated on hate tweets, so threshold-based safety rules should be validated before deployment.\n6. LinUCB explores online with uncertainty bonuses. NeuralUCB-style LinUCB uses learned representations, which can help if the reward model learned useful text features, but it can also inherit representation bias.\n\n"
+  }
+]

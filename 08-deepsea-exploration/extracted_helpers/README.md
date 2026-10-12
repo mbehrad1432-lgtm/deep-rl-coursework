@@ -1,0 +1,1 @@
+Recovered student helper bodies from notebook writefile cells, without executing them. Copy into the original complete course hw package; these files alone cannot run the experiment. Source/template attribution remains in notebook headers and helper docstrings.
