@@ -1,0 +1,66 @@
+[
+  {
+    "source_cell": 8,
+    "text": "action_spec: Composite(\n    agents: Composite(\n        action: BoundedContinuous(\n            shape=torch.Size([60, 3, 2]),\n            space=ContinuousBox(\n                low=Tensor(shape=torch.Size([60, 3, 2]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                high=Tensor(shape=torch.Size([60, 3, 2]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n            device=cuda:0,\n            dtype=torch.float32,\n            domain=continuous),\n        device=cuda:0,\n        shape=torch.Size([60, 3]),\n        data_cls=None),\n    device=cuda:0,\n    shape=torch.Size([60]),\n    data_cls=None)\nreward_spec: Composite(\n    agents: Composite(\n        reward: UnboundedContinuous(\n            shape=torch.Size([60, 3, 1]),\n            space=ContinuousBox(\n                low=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                high=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n            device=cuda:0,\n            dtype=torch.float32,\n            domain=continuous),\n        device=cuda:0,\n        shape=torch.Size([60, 3]),\n        data_cls=None),\n    device=cuda:0,\n    shape=torch.Size([60]),\n    data_cls=None)\ndone_spec: Composite(\n    done: Categorical(\n        shape=torch.Size([60, 1]),\n        space=CategoricalBox(n=2),\n        device=cuda:0,\n        dtype=torch.bool,\n        domain=discrete),\n    terminated: Categorical(\n        shape=torch.Size([60, 1]),\n        space=CategoricalBox(n=2),\n        device=cuda:0,\n        dtype=torch.bool,\n        domain=discrete),\n    device=cuda:0,\n    shape=torch.Size([60]),\n    data_cls=None)\nobservation_spec: Composite(\n    agents: Composite(\n        observation: UnboundedContinuous(\n            shape=torch.Size([60, 3, 18]),\n            space=ContinuousBox(\n                low=Tensor(shape=torch.Size([60, 3, 18]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                high=Tensor(shape=torch.Size([60, 3, 18]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n            device=cuda:0,\n            dtype=torch.float32,\n            domain=continuous),\n        info: Composite(\n            pos_rew: UnboundedContinuous(\n                shape=torch.Size([60, 3, 1]),\n                space=ContinuousBox(\n                    low=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                    high=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n                device=cuda:0,\n                dtype=torch.float32,\n                domain=continuous),\n            final_rew: UnboundedContinuous(\n                shape=torch.Size([60, 3, 1]),\n                space=ContinuousBox(\n                    low=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                    high=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n                device=cuda:0,\n                dtype=torch.float32,\n                domain=continuous),\n            agent_collisions: UnboundedContinuous(\n                shape=torch.Size([60, 3, 1]),\n                space=ContinuousBox(\n                    low=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True),\n                    high=Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, contiguous=True)),\n                device=cuda:0,\n                dtype=torch.float32,\n                domain=continuous),\n            device=cuda:0,\n            shape=torch.Size([60, 3]),\n            data_cls=None),\n        device=cuda:0,\n        shape=torch.Size([60, 3]),\n        data_cls=None),\n    device=cuda:0,\n    shape=torch.Size([60]),\n    data_cls=None)\n"
+  },
+  {
+    "source_cell": 9,
+    "text": "action_keys: [('agents', 'action')]\nreward_keys: [('agents', 'reward')]\ndone_keys: ['done', 'terminated']\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "\u001b[92m2026-08-15 13:36:26,540 [torchrl][INFO]\u001b[0m    check_env_specs succeeded!\u001b[92m [END]\u001b[0m\n"
+  },
+  {
+    "source_cell": 12,
+    "text": "rollout of three steps: TensorDict(\n    fields={\n        agents: TensorDict(\n            fields={\n                action: Tensor(shape=torch.Size([60, 5, 3, 2]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                episode_reward: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                info: TensorDict(\n                    fields={\n                        agent_collisions: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        final_rew: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        pos_rew: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n                    batch_size=torch.Size([60, 5, 3]),\n                    device=cuda:0,\n                    is_shared=True),\n                observation: Tensor(shape=torch.Size([60, 5, 3, 18]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n            batch_size=torch.Size([60, 5, 3]),\n            device=cuda:0,\n            is_shared=True),\n        done: Tensor(shape=torch.Size([60, 5, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),\n        next: TensorDict(\n            fields={\n                agents: TensorDict(\n                    fields={\n                        episode_reward: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        info: TensorDict(\n                            fields={\n                                agent_collisions: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                                final_rew: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                                pos_rew: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n                            batch_size=torch.Size([60, 5, 3]),\n                            device=cuda:0,\n                            is_shared=True),\n                        observation: Tensor(shape=torch.Size([60, 5, 3, 18]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        reward: Tensor(shape=torch.Size([60, 5, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n                    batch_size=torch.Size([60, 5, 3]),\n                    device=cuda:0,\n                    is_shared=True),\n                done: Tensor(shape=torch.Size([60, 5, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),\n                terminated: Tensor(shape=torch.Size([60, 5, 1]), device=cuda:0, dtype=torch.bool, is_shared=True)},\n            batch_size=torch.Size([60, 5]),\n            device=cuda:0,\n            is_shared=True),\n        terminated: Tensor(shape=torch.Size([60, 5, 1]), device=cuda:0, dtype=torch.bool, is_shared=True)},\n    batch_size=torch.Size([60, 5]),\n    device=cuda:0,\n    is_shared=True)\nShape of the rollout TensorDict: torch.Size([60, 5])\n"
+  },
+  {
+    "source_cell": 15,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\tensordict\\_td.py:612: FutureWarning: TensorDict.to_module() is replacing an existing nn.Parameter in the destination module with a tensor leaf that is not an nn.Parameter. This historical behavior can remove the key from module.state_dict(). In tensordict v0.14, to_module() will preserve existing module parameter and buffer registrations by default. Pass preserve_module_state=False to keep the current replacement behavior, or preserve_module_state=True to opt in to the v0.14 behavior now.\n  local_out = _set_tensor_dict(\n"
+  },
+  {
+    "source_cell": 30,
+    "text": "Training MADDPG...:   0%|          | 0/500 [00:00<?, ?it/s]"
+  },
+  {
+    "source_cell": 30,
+    "text": "\u001b[92m2026-08-15 13:36:28,421 [torchrl][INFO]\u001b[0m    Initialized LazyMemmapStorage with torch.Size([1000000]) shape\u001b[92m [END]\u001b[0m\n"
+  },
+  {
+    "source_cell": 30,
+    "text": "episode_reward_mean = 2.63: 100%|██████████| 500/500 [17:47<00:00,  2.14s/it] \n"
+  },
+  {
+    "source_cell": 32,
+    "text": "<Figure size 640x480 with 1 Axes>"
+  },
+  {
+    "source_cell": 34,
+    "text": "<IPython.core.display.Image object>"
+  },
+  {
+    "source_cell": 47,
+    "text": "Running policy: TensorDict(\n    fields={\n        agents: TensorDict(\n            fields={\n                action: Tensor(shape=torch.Size([60, 3, 2]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                action_log_prob: Tensor(shape=torch.Size([60, 3]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                episode_reward: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                info: TensorDict(\n                    fields={\n                        agent_collisions: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        final_rew: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        pos_rew: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n                    batch_size=torch.Size([60, 3]),\n                    device=cuda:0,\n                    is_shared=True),\n                loc: Tensor(shape=torch.Size([60, 3, 2]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                observation: Tensor(shape=torch.Size([60, 3, 18]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                scale: Tensor(shape=torch.Size([60, 3, 2]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n            batch_size=torch.Size([60, 3]),\n            device=cuda:0,\n            is_shared=True),\n        done: Tensor(shape=torch.Size([60, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),\n        terminated: Tensor(shape=torch.Size([60, 1]), device=cuda:0, dtype=torch.bool, is_shared=True)},\n    batch_size=torch.Size([60]),\n    device=cuda:0,\n    is_shared=True)\nRunning value: TensorDict(\n    fields={\n        agents: TensorDict(\n            fields={\n                episode_reward: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                info: TensorDict(\n                    fields={\n                        agent_collisions: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        final_rew: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                        pos_rew: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n                    batch_size=torch.Size([60, 3]),\n                    device=cuda:0,\n                    is_shared=True),\n                observation: Tensor(shape=torch.Size([60, 3, 18]), device=cuda:0, dtype=torch.float32, is_shared=True),\n                state_value: Tensor(shape=torch.Size([60, 3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True)},\n            batch_size=torch.Size([60, 3]),\n            device=cuda:0,\n            is_shared=True),\n        done: Tensor(shape=torch.Size([60, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),\n        terminated: Tensor(shape=torch.Size([60, 1]), device=cuda:0, dtype=torch.bool, is_shared=True)},\n    batch_size=torch.Size([60]),\n    device=cuda:0,\n    is_shared=True)\n"
+  },
+  {
+    "source_cell": 55,
+    "text": "episode_reward_mean = 0:   0%|          | 0/20 [00:00<?, ?it/s]"
+  },
+  {
+    "source_cell": 55,
+    "text": "\u001b[92m2026-08-15 13:54:26,373 [torchrl][INFO]\u001b[0m    Initialized LazyTensorStorage with torch.Size([6000]) shape\u001b[92m [END]\u001b[0m\n"
+  },
+  {
+    "source_cell": 55,
+    "text": "episode_reward_mean = 3.198: 100%|██████████| 20/20 [01:50<00:00,  5.53s/it]\n"
+  },
+  {
+    "source_cell": 57,
+    "text": "<Figure size 640x480 with 1 Axes>"
+  },
+  {
+    "source_cell": 59,
+    "text": "<IPython.core.display.Image object>"
+  }
+]

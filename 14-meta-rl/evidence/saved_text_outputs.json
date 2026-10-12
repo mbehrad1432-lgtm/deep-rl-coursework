@@ -1,0 +1,66 @@
+[
+  {
+    "source_cell": 7,
+    "text": "Note: you may need to restart the kernel to use updated packages.\n"
+  },
+  {
+    "source_cell": 7,
+    "text": "WARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\n\n[notice] A new release of pip is available: 26.1.2 -> 26.2.1\n[notice] To update, run: python.exe -m pip install --upgrade pip\n"
+  },
+  {
+    "source_cell": 9,
+    "text": "{'env_id': 'HalfCheetah-v5', 'velocity_low': 0.0, 'velocity_high': 3.0, 'episode_horizon': 200, 'recurrent_rollouts_per_task': 2, 'num_train_tasks': 100, 'num_validation_tasks': 20, 'num_test_tasks': 30, 'task_split_seed': 2026, 'total_frames': 1000000, 'evaluation_interval_frames': 1000000, 'evaluation_tasks': 30, 'evaluation_episodes_per_task': 1, 'seeds': (11, 22, 33, 44, 55), 'gamma': 0.97, 'gae_lambda': 0.9, 'max_grad_norm': 0.5, 'verbose_interval_updates': 10}\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "Device: cuda\n"
+  },
+  {
+    "source_cell": 14,
+    "text": "Training tasks: [0.53680444 1.9197395  1.4018052  1.1115016  1.064752   2.3715549\n 2.7154315  0.53205955 1.9583544  0.8949083  2.9008865  2.7595506\n 1.9076124  2.2581964  1.545461   2.4776857  1.3451416  1.0164374\n 0.8336976  0.6789992  1.5774505  1.2927362  1.9895419  0.03852145\n 1.3431057  1.0955424  0.5861928  1.7845976  1.3059394  0.8999745\n 0.62824833 2.6238723  2.392387   1.820129   1.0353017  2.8404593\n 1.6901321  1.2982882  2.7013488  0.9580254  2.0879846  0.94146097\n 0.78465915 2.1025226  0.68367594 1.479331   1.7400854  0.5667191\n 2.193722   1.6454492  1.8645098  1.1164329  1.2605798  1.4844891\n 1.4099127  2.0269177  1.7315325  1.248812   0.00540706 2.3820932\n 1.5581527  0.979634   1.499865   0.2803378  2.7141123  2.9692085\n 0.17620565 1.0746937  2.1901937  0.9427144  1.7011492  1.249713\n 2.3226364  2.8753932  2.6651862  1.8628064  0.48082295 2.8411863\n 0.07089729 0.8931284  0.84484047 2.015478   1.4620892  0.27866563\n 0.03857366 1.8129473  1.47445    1.8041464  1.6920716  2.6713774\n 2.7551906  0.5647715  2.8263626  2.36318    1.9170787  1.9788218\n 1.6381807  2.7517898  0.69978964 1.797948  ]\nValidation tasks: [2.4427292  0.40428436 1.8465248  1.2085004  2.298109   0.20314308\n 1.8204432  2.5712361  1.8850436  0.9640131  1.9673882  1.0144585\n 2.0057783  0.3850332  0.83997524 0.09815513 0.25172818 1.6643089\n 0.69509465 1.5482478 ]\nTest tasks: [1.9787086  2.6435585  1.065183   0.9560369  0.9410002  0.35354894\n 1.9895501  2.4589636  1.4190146  1.6748922  2.8754404  2.0967455\n 2.2351046  2.6684952  0.6473717  1.9504982  2.1521835  2.5266838\n 1.0313567  2.066384   1.8132018  1.2280831  0.30505726 1.0591453\n 2.8904543  0.6495705  0.34091398 1.1030383  0.30294237 0.8015968 ]\n"
+  },
+  {
+    "source_cell": 15,
+    "text": "Observation shape: (17,)\nAction shape: (6,)\nOne-step reward: -0.17525023520591745\nForward velocity: 0.4368305534064483\nTarget velocity: 0.5368044376373291\n"
+  },
+  {
+    "source_cell": 41,
+    "text": "Core MAML/RL2/VariBAD tensor-contract smoke tests passed.\n"
+  },
+  {
+    "source_cell": 42,
+    "text": "VariBAD seed 11:   0%|          | 0/1000000 [1:12:01<?, ?it/s] 83.80it/s, policy_loss=-0.004, vae_loss=3.194]\nVariBAD seed 11: 100%|██████████| 1000000/1000000 [1:44:13<00:00, 159.90it/s, policy_loss=-0.006, vae_loss=0.139]\nRL2 seed 11: 100%|██████████| 1000000/1000000 [46:57<00:00, 354.87it/s, policy_loss=0.011]\nMAML seed 11: 100%|██████████| 1000000/1000000 [40:28<00:00, 411.85it/s, meta_loss=0.154] \nVariBAD seed 22: 100%|██████████| 1000000/1000000 [1:44:25<00:00, 159.61it/s, policy_loss=-0.006, vae_loss=0.160]\nRL2 seed 22: 100%|██████████| 1000000/1000000 [47:36<00:00, 350.10it/s, policy_loss=0.004]\nMAML seed 22: 100%|██████████| 1000000/1000000 [40:26<00:00, 412.19it/s, meta_loss=-0.136]\nVariBAD seed 33: 100%|██████████| 1000000/1000000 [1:44:40<00:00, 159.23it/s, policy_loss=-0.009, vae_loss=0.162]\nRL2 seed 33: 100%|██████████| 1000000/1000000 [48:22<00:00, 344.50it/s, policy_loss=-0.002]\nMAML seed 33: 100%|██████████| 1000000/1000000 [41:16<00:00, 403.83it/s, meta_loss=-0.008]\nVariBAD seed 44: 100%|██████████| 1000000/1000000 [1:45:22<00:00, 158.16it/s, policy_loss=-0.008, vae_loss=0.116]\nRL2 seed 44: 100%|██████████| 1000000/1000000 [48:32<00:00, 343.39it/s, policy_loss=0.006] \nMAML seed 44: 100%|██████████| 1000000/1000000 [41:15<00:00, 403.89it/s, meta_loss=-0.074]\nVariBAD seed 55: 100%|██████████| 1000000/1000000 [1:44:47<00:00, 159.04it/s, policy_loss=-0.005, vae_loss=0.188]\nRL2 seed 55: 100%|██████████| 1000000/1000000 [46:50<00:00, 355.79it/s, policy_loss=0.000]\nMAML seed 55: 100%|██████████| 1000000/1000000 [40:43<00:00, 409.22it/s, meta_loss=0.123] \n"
+  },
+  {
+    "source_cell": 42,
+    "text": "Completed and validated 15 runs.\n"
+  },
+  {
+    "source_cell": 51,
+    "text": "<Figure size 1000x900 with 2 Axes>"
+  },
+  {
+    "source_cell": 51,
+    "text": "    method  seeds  final_frames_mean  first_rollout_mean  first_rollout_std  \\\n0  VariBAD      3          1000000.0          -74.743710           2.265472   \n1      RL2      3          1000000.0          -80.100602           4.646582   \n2     MAML      3          1000000.0          -84.848911           5.725916   \n\n   adapted_mean  adapted_std  mean_adaptation_gain  \n0    -44.810046     1.819054             29.933664  \n1    -60.660726     3.242337             19.439876  \n2    -70.495123     1.731246             14.353788  "
+  },
+  {
+    "source_cell": 52,
+    "text": "<Figure size 900x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 55,
+    "text": "<Figure size 1000x900 with 2 Axes>"
+  },
+  {
+    "source_cell": 55,
+    "text": "    method  seeds  final_frames_mean  first_rollout_mean  first_rollout_std  \\\n0  VariBAD      5          1000000.0         -218.996144           8.606830   \n2     MAML      5          1000000.0         -244.289827           6.038935   \n1      RL2      5          1000000.0         -270.849606           4.290161   \n\n   adapted_mean  adapted_std  mean_adaptation_gain  \n0   -219.368498     6.928310             -0.372354  \n2   -244.680132     3.599068             -0.390305  \n1   -271.555074     4.123240             -0.705468  "
+  },
+  {
+    "source_cell": 56,
+    "text": "<Figure size 900x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 57,
+    "text": "<Figure size 900x500 with 1 Axes>"
+  }
+]

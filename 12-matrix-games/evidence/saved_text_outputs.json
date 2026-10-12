@@ -1,0 +1,50 @@
+[
+  {
+    "source_cell": 5,
+    "text": "Running Standard Fictitious Play...\nRunning Modified Fictitious Play...\n"
+  },
+  {
+    "source_cell": 5,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 5,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 5,
+    "text": "Standard final P1 frequencies: [0.333932 0.333204 0.332864]\nStandard final P2 frequencies: [0.332842 0.333589 0.333569]\nStandard final distances to NE: P1=0.000772, P2=0.000602\nModified final P1 frequencies: [0.333333 0.500432 0.166235]\nModified final P2 frequencies: [0.334977 0.498168 0.166855]\nModified final distances to NE: P1=0.000611, P2=0.002468\n"
+  },
+  {
+    "source_cell": 8,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 8,
+    "text": "epsilon=0.01: final P1 frequencies=[0.333296 0.500256 0.166448]\nepsilon=0.01: final P2 frequencies=[0.334838 0.498944 0.166218]\nepsilon=0.01: final empirical expected payoff=0.000002\n"
+  },
+  {
+    "source_cell": 8,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 8,
+    "text": "epsilon=0.1: final P1 frequencies=[0.335095 0.498573 0.166332]\nepsilon=0.1: final P2 frequencies=[0.33348  0.500102 0.166418]\nepsilon=0.1: final empirical expected payoff=-0.000002\n"
+  },
+  {
+    "source_cell": 8,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 8,
+    "text": "epsilon=0.3: final P1 frequencies=[0.334462 0.498987 0.166551]\nepsilon=0.3: final P2 frequencies=[0.335024 0.498531 0.166445]\nepsilon=0.3: final empirical expected payoff=-0.000000\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "<Figure size 1800x500 with 3 Axes>"
+  },
+  {
+    "source_cell": 11,
+    "text": "Final P1 average strategy: [0.33355385 0.50053805 0.1659081 ]\nFinal P2 average strategy: [0.3328517  0.49977693 0.16737136]\nModified-game Nash strategy: [0.33333333 0.5        0.16666667]\nFinal P1 total positive regret: 847.000\nFinal P1 average positive regret: 0.000847\n"
+  }
+]

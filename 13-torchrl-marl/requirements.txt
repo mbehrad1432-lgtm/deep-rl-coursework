@@ -1,0 +1,11 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+torch
+torchrl
+tensordict
+vmas
+numpy
+matplotlib
+tqdm
+Pillow
+pyvirtualdisplay
+jupyterlab

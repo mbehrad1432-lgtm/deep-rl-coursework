@@ -1,0 +1,4 @@
+# Dependency inventory only: no tested version lock or environment reproduction.
+numpy
+matplotlib
+jupyterlab

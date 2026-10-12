@@ -1,0 +1,13 @@
+{
+  "folder": "13-torchrl-marl",
+  "source": "rl_maddpg_mappo_comp.ipynb",
+  "source_sha256": "349f31354edaeab0060fcbff9f2a7a620f24e53bd1d03e616e1bfd485c14007a",
+  "code_cells": 36,
+  "nonempty_unexecuted_source_cells": [
+    2,
+    22,
+    49
+  ],
+  "saved_errors": [],
+  "mode": "static review; not rerun"
+}

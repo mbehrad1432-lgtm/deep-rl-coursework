@@ -1,0 +1,198 @@
+[
+  {
+    "source_cell": 1,
+    "text": "Installing missing packages: ['minigrid']\n"
+  },
+  {
+    "source_cell": 3,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n  from .autonotebook import tqdm as notebook_tqdm\n"
+  },
+  {
+    "source_cell": 3,
+    "text": "Using cuda for training; outputs will be saved to I:\\دانشگاه\\ترم 8\\Deep RL\\HW\\HW_7\\outputs\\minigrid_imitation_learning\n"
+  },
+  {
+    "source_cell": 6,
+    "text": "Environment: MiniGrid-DoorKey-16x16-v0\nObservation keys: ['image', 'direction', 'mission']\nImage observation shape: (7, 7, 3)\nAction-space size: 7\nInitial agent position/direction: (2, 10) 1\n"
+  },
+  {
+    "source_cell": 6,
+    "text": "<Figure size 500x500 with 1 Axes>"
+  },
+  {
+    "source_cell": 7,
+    "text": "{'return': 0.0, 'success': False, 'length': 100}\n"
+  },
+  {
+    "source_cell": 7,
+    "text": "<IPython.core.display.Image object>"
+  },
+  {
+    "source_cell": 10,
+    "text": "                                                           "
+  },
+  {
+    "source_cell": 10,
+    "text": "Oracle success rate: 100.0%\nOracle average length: 35.6\n"
+  },
+  {
+    "source_cell": 10,
+    "text": "\r"
+  },
+  {
+    "source_cell": 11,
+    "text": "expert demonstrations: 100%|██████████| 80/80 [00:07<00:00, 11.09it/s]\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "Expert transitions: 2639\nExpert episodes: 80\nExpert success rate: 1.0\nExpert average length: 32.99\n"
+  },
+  {
+    "source_cell": 11,
+    "text": "<IPython.core.display.Image object>"
+  },
+  {
+    "source_cell": 11,
+    "text": "<Figure size 400x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 14,
+    "text": "                                                   \r"
+  },
+  {
+    "source_cell": 14,
+    "text": "<Figure size 600x350 with 2 Axes>"
+  },
+  {
+    "source_cell": 14,
+    "text": "                                                           "
+  },
+  {
+    "source_cell": 14,
+    "text": "Final validation accuracy: 95.5%\nBC success rate: 50.0%\nBC average return: 0.491\nBC average episode length: 280.8\n"
+  },
+  {
+    "source_cell": 14,
+    "text": "\r"
+  },
+  {
+    "source_cell": 16,
+    "text": "BC failure found automatically at seed 4000.\n{'return': 0.0, 'success': False, 'length': 512}\n"
+  },
+  {
+    "source_cell": 16,
+    "text": "<IPython.core.display.Image object>"
+  },
+  {
+    "source_cell": 16,
+    "text": "<Figure size 400x400 with 2 Axes>"
+  },
+  {
+    "source_cell": 18,
+    "text": "                                                                \r"
+  },
+  {
+    "source_cell": 18,
+    "text": "DAgger 1: labels=4737, success=70.0%\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "                                                                \r"
+  },
+  {
+    "source_cell": 18,
+    "text": "DAgger 2: labels=6827, success=77.5%\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "                                                                \r"
+  },
+  {
+    "source_cell": 18,
+    "text": "DAgger 3: labels=9311, success=30.0%\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "                                                                \r"
+  },
+  {
+    "source_cell": 18,
+    "text": "DAgger 4: labels=11957, success=55.0%\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "                                                           \r"
+  },
+  {
+    "source_cell": 18,
+    "text": "Best DAgger success rate: 77.5%\n"
+  },
+  {
+    "source_cell": 18,
+    "text": "<IPython.core.display.Image object>"
+  },
+  {
+    "source_cell": 20,
+    "text": "                                                                        \r"
+  },
+  {
+    "source_cell": 20,
+    "text": "Critical DAgger 1: labels=2789, mean queried entropy=0.841, success=52.5%\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                                                                        \r"
+  },
+  {
+    "source_cell": 20,
+    "text": "Critical DAgger 2: labels=2939, mean queried entropy=0.746, success=62.5%\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                                                                        \r"
+  },
+  {
+    "source_cell": 20,
+    "text": "Critical DAgger 3: labels=3089, mean queried entropy=0.763, success=65.0%\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                                                                        \r"
+  },
+  {
+    "source_cell": 20,
+    "text": "Critical DAgger 4: labels=3239, mean queried entropy=0.763, success=55.0%\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "                                                           "
+  },
+  {
+    "source_cell": 20,
+    "text": "Best critical-state DAgger success rate: 65.0%\n"
+  },
+  {
+    "source_cell": 20,
+    "text": "\r"
+  },
+  {
+    "source_cell": 22,
+    "text": "                                                           \r"
+  },
+  {
+    "source_cell": 22,
+    "text": "<IPython.core.display.Markdown object>"
+  },
+  {
+    "source_cell": 22,
+    "text": "<Figure size 650x400 with 1 Axes>"
+  },
+  {
+    "source_cell": 22,
+    "text": "<Figure size 1500x450 with 3 Axes>"
+  },
+  {
+    "source_cell": 22,
+    "text": "Saved comparison heatmaps to outputs\\minigrid_imitation_learning\\final_visit_heatmaps.png\n"
+  }
+]
